@@ -1,36 +1,134 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SafeEncode
 
-## Getting Started
+SafeEncode is a tool designed for encoding and decoding data with a focus on security and privacy. It aims to securely convert sensitive data, such as confidential information and personal data, into a safe format for storage and transmission. This tool can be used for various secure data processing tasks, including secure communication and storage in databases.
 
-First, run the development server:
+# Links
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- [Documentation](https://safe-encode.vercel.app/docs)
+- [API Reference](https://safe-encode.vercel.app/docs/api-reference)
+- [Privacy Policy](https://safe-encode.vercel.app/docs/privacy-policy)
+
+# Language
+- English
+- [日本語](https://github.com/Fun117/SafeEncode/blob/main/README/ja.md)
+
+---
+
+# Contributing to the Docs
+
+Contributing to the documentation is simple and easy. To contribute to the documentation, please visit the official repository.
+
+# Learn how to get started with SafeEncode!
+
+> [!NOTE]
+> To decrypt encrypted content, you must use the same key that was used for encryption. Attempting decryption with a different key may result in the content not being decrypted correctly. Please ensure you use the correct key for decryption.
+
+# API Reference
+- [Encrypt Endpoint](#encrypt-endpoint)
+- [Decryption Endpoint](#decryption-endpoint)
+
+## Encrypt Endpoint
+
+This endpoint is used to encrypt content using a provided key.
+
+### Endpoint
+
+```
+GET /api/generation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Parameters
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`key` (required): The encryption key.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+`content` (required): The content to be encrypted.
 
-## Learn More
+### Response
 
-To learn more about Next.js, take a look at the following resources:
+`content` : The encrypted content.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Errors
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+400 Bad Request: If any of the required parameters are missing or invalid.
 
-## Deploy on Vercel
+### Example
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Request
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```js
+fetch('http://safe-encode.vercel.app/api/generation?key=<KEY>&content=<CONTENT>')
+	.then(response => response.json())
+	.then(data => {
+		console.log(data.content);
+		if (!data.error) {
+			// Handle successful response here
+		}
+	})
+	.catch(error => {
+		console.error('Error fetching data:', error);
+	});
+```
+
+## Decryption Endpoint
+
+This endpoint is used to decrypt content using a provided key.
+
+### Endpoint
+
+```
+GET /api/generation
+```
+
+### Parameters
+
+`key` (required): The decryption key.
+
+`content` (required): The content to be decrypted.
+
+### Response
+
+`content` : The decrypted content.
+
+### Errors
+
+400 Bad Request: If any of the required parameters are missing or invalid.
+
+### Example
+
+Request
+
+```js
+fetch('http://safe-encode.vercel.app/api/decryption?key=<KEY>&content=<CONTENT>')
+	.then(response => response.json())
+	.then(data => {
+		console.log(data.content);
+		if (!data.error) {
+			// Handle successful response here
+		}
+	})
+	.catch(error => {
+		console.error('Error fetching data:', error);
+	});
+```
+
+---
+
+# Privacy Policy
+
+## Operator Information
+
+This feature is operated and developed by an individual (Fun117).
+
+## Information Collected
+
+When using this service, information is collected only when making API requests. The collected information is used to track the usage frequency of the API. However, individual details such as URLs or their content are not collected.
+
+## Contact Information
+
+If you have any questions or concerns, please feel free to contact us at the following email address:
+
+- Operator Name: Fun117
+
+## Notification of Changes
+
+This privacy policy may be updated periodically. Any changes will be notified on this page. Please check back regularly for updates.
