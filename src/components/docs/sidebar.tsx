@@ -85,6 +85,7 @@ export function DocsHeader({ sidebar }: {
 
     useEffect(() => {
         const handleBodyOverflow = () => {
+            //const bodyElement = document.querySelector(`main`);
             const bodyElement = document.body;
             if (bodyElement) {
                 if (open? open==='close'? false : true : false) {
@@ -145,7 +146,7 @@ export function DocsHeader({ sidebar }: {
 						<FontAwesomeIcon icon={faBars} className='text-[25px]'/>
 					</button>
 				</div>
-				<div className={`fixed top-0 left-0 bg-black/50 w-full h-full ${open?  open==='close'? 'hidden' : 'fadeLeft' : 'fadeOutLeft'} transition ease-in-out duration-300`}>
+				<div className={`fixed top-0 left-0 bg-black/50 w-full h-full ${open?  open==='close'? 'hidden' : 'fadeLeft' : 'fadeOutLeft hidden'}`}>
 					<div className={`flex w-full h-full`}>
 						<div className='bg-neutral-100 max-w-[250px] w-full h-full'>
 							<div className='flex justify-between items-center gap-2 bg-green-500 p-4 select-none'>
@@ -153,8 +154,8 @@ export function DocsHeader({ sidebar }: {
 									<Image
 										src="/assets/brand/SafeEncode/safe-encode512x512.png"
 										alt='Logo'
-										width={35}
-										height={35}
+										width={38}
+										height={38}
 									/>
 									<h1 className='font-semibold text-[20px]'>SafeEncode</h1>
 								</a>
@@ -164,7 +165,7 @@ export function DocsHeader({ sidebar }: {
 									</button>
 								</div>
 							</div>
-							<div className='text-black pl-2'>
+							<div className='text-black h-full pl-2 overflow-scroll'>
                                 <nav className=' w-full pt-2'>
                                     <ul className='flex flex-col gap-1 w-full *:w-full *:rounded-l-lg'>
                                         {sidebar.map((item) => (

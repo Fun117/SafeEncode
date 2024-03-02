@@ -7,9 +7,9 @@ type MainProps = {
 const Main: React.FC<MainProps> = ({ children }) => {
 	return (
 		<>
-			<div className='bg-white text-black box-border w-full min-h-[100vh] h-full'>
+			<main className='bg-white text-black box-border w-full min-h-[100vh] h-full'>
                 {children}
-			</div>
+			</main>
 		</>
 	);
 };
