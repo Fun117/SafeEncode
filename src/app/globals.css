@@ -31,3 +31,519 @@ body {
     text-wrap: balance;
   }
 }
+
+/* ========= animation ========= */
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+.animated-fade-in {
+  animation: fadeIn ease-in-out 0.5s;
+}
+.animated-fade-in-\[0\.25s\] {
+  animation: fadeIn ease-in-out 0.25s;
+}
+.animated-fade-in-\[0\.5s\] {
+  animation: fadeIn ease-in-out 0.5s;
+}
+.animated-fade-in-\[1\.0s\] {
+  animation: fadeIn ease-in-out 1.0s;
+}
+.animated-fade-in-\[1\.5s\] {
+  animation: fadeIn ease-in-out 1.5s;
+}
+.animated-fade-in-\[2\.0s\] {
+  animation: fadeIn ease-in-out 2.0s;
+}
+
+@keyframes slideInUp {
+  from {
+      transform: translateY(20%);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+.animated-slideIn-up {
+  animation: slideInUp ease-in-out 0.5s;
+}
+.animated-slideIn-up-\[0\.5s\] {
+  animation: slideInUp ease-in-out 0.5s;
+}
+.animated-slideIn-up-\[1\.0s\] {
+  animation: slideInUp ease-in-out 1.0s;
+}
+.animated-slideIn-up-\[1\.5s\] {
+  animation: slideInUp ease-in-out 1.5s;
+}
+.animated-slideIn-up-\[2\.0s\] {
+  animation: slideInUp ease-in-out 2.0s;
+}
+
+@keyframes slideInDown {
+  from {
+      transform: translateY(-20%);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0%);
+      opacity: 1;
+  }
+}
+.animated-slideIn-down {
+  animation: slideInDown ease-in-out 0.5s;
+}
+.animated-slideIn-down-\[0\.5s\] {
+  animation: slideInDown ease-in-out 0.5s;
+}
+.animated-slideIn-down-\[1\.0s\] {
+  animation: slideInDown ease-in-out 1.0s;
+}
+.animated-slideIn-down-\[1\.5s\] {
+  animation: slideInDown ease-in-out 1.5s;
+}
+.animated-slideIn-down-\[2\.0s\] {
+  animation: slideInDown ease-in-out 2.0s;
+}
+
+@keyframes slideOutUp {
+  from {
+      transform: translateY(0);
+      opacity: 1;
+  }
+  to {
+      transform: translateY(-20%);
+      opacity: 0;
+  }
+}
+.animated-slideOut-up-\[opacity-0\] {
+  animation: slideOutUp ease-in-out 0.5s;
+  opacity: 0;
+}
+.animated-slideOut-up {
+  animation: slideOutUp ease-in-out 0.5s;
+}
+.animated-slideOut-up-\[0\.5s\] {
+  animation: slideOutUp ease-in-out 0.5s;
+}
+.animated-slideOut-up-\[1\.0s\] {
+  animation: slideOutUp ease-in-out 1.0s;
+}
+.animated-slideOut-up-\[1\.5s\] {
+  animation: slideOutUp ease-in-out 1.5s;
+}
+.animated-slideOut-up-\[2\.0s\] {
+  animation: slideOutUp ease-in-out 2.0s;
+}
+
+
+.fadeUpAni{
+  animation-name:fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+@keyframes fadeUpAnime{
+  from {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+.fadeUpTriggerSet{
+  opacity: 0;
+}
+
+
+/* フィードアウト - その場で */
+.fadeOut {
+  animation-name:fadeOutAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+@keyframes fadeOutAnime{
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+
+/* フィードアウト - その場から下に */
+.fadeOutDown {
+  animation-name:fadeOutDownAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+@keyframes fadeOutDownAnime{
+  from {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  to {
+      opacity: 0;
+      transform: translateY(20px); /* 移動する距離を調整 */
+  }
+}
+
+/* フィードアウト - その場から上に */
+.fadeOutUp {
+  animation-name:fadeOutUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+@keyframes fadeOutUpAnime{
+  from {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  to {
+      opacity: 0;
+      transform: translateY(-20px); /* 移動する距離を調整 */
+  }
+}
+
+/* フィードアウト - その場から左に */
+.fadeOutLeft {
+  animation-name:fadeOutLeftAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+@keyframes fadeOutLeftAnime{
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
+
+/* フィードイン - その場で */
+.fadeIn{
+  animation-name:fadeInAnime;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+@keyframes fadeInAnime{
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+/* フィードイン - 下から */
+
+.fadeUp{
+  animation-name:fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+.fadeUp0\.65{
+  animation-name:fadeUpAnime;
+  animation-duration:0.65s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+.fadeUp0\.75{
+  animation-name:fadeUpAnime;
+  animation-duration:0.75s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+.fadeUp0\.85{
+  animation-name:fadeUpAnime;
+  animation-duration:0.85s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+.fadeUp0\.95{
+  animation-name:fadeUpAnime;
+  animation-duration:0.95s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+.fadeUp1\.05{
+  animation-name:fadeUpAnime;
+  animation-duration:1.05s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+.fadeUp1\.15{
+  animation-name:fadeUpAnime;
+  animation-duration:1.15s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* フィードイン - 上から */
+
+.fadeDown{
+  animation-name:fadeDownAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+.fadeDown1{
+  animation-name:fadeDownAnime;
+  animation-duration:0.65s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+.fadeDown2{
+  animation-name:fadeDownAnime;
+  animation-duration:0.75s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+.fadeDown3{
+  animation-name:fadeDownAnime;
+  animation-duration:0.85s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+.fadeDown4{
+  animation-name:fadeDownAnime;
+  animation-duration:0.95s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+.fadeDown5{
+  animation-name:fadeDownAnime;
+  animation-duration:1.05s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+.fadeDown6{
+  animation-name:fadeDownAnime;
+  animation-duration:1.15s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+@keyframes fadeDownAnime{
+  from {
+      opacity: 0;
+      transform: translateY(-100px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* フィードイン - 左から */
+
+.fadeLeft{
+  animation-name:fadeLeftAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+@keyframes fadeLeftAnime{
+  from {
+      opacity: 0;
+      transform: translateX(-100px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* フィードイン - 右から */
+
+.fadeRight{
+  animation-name:fadeRightAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+@keyframes fadeRightAnime{
+  from {
+      opacity: 0;
+      transform: translateX(100px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* アラートcss */
+/* https://codepen.io/alvarotrigo/pen/NWzKoOV */
+main {
+  padding: 40px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alert {
+  width: 512px;
+  padding: 16px;
+  margin: 8px;
+  max-width: 90%;
+}
+
+.alert-1-primary {
+  background-color: rgba(77, 77, 255, 0.05);
+}
+.alert-1-primary .alert-title {
+  color: #4d4dff;
+}
+
+.alert-1-warning {
+  background-color: rgba(255, 186, 0, 0.05);
+}
+.alert-1-warning .alert-title {
+  color: #ffba00;
+}
+
+.alert-2-success {
+  border-left: 4px solid #2ec946;
+  background-color: rgba(46, 201, 70, 0.05);
+}
+.alert-2-success .alert-title {
+  color: #2ec946;
+}
+
+.alert-2-secondary {
+  border-left: 4px solid #666666;
+  background-color: rgba(102, 102, 102, 0.05);
+}
+.alert-2-secondary .alert-title {
+  color: #666666;
+}
+
+.alert-3-primary {
+  border: 1px solid #cdcdff;
+  border-radius: 8px;
+  background-color: rgba(77, 77, 255, 0.05);
+}
+.alert-3-primary .alert-title {
+  color: #4d4dff;
+}
+
+.alert-3-danger {
+  border: 1px solid #ffb8b8;
+  border-radius: 8px;
+  background-color: rgba(255, 56, 56, 0.05);
+}
+.alert-3-danger .alert-title {
+  color: #ff3838;
+}
+
+.alert-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
+.alert-content {
+  margin: 0;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  color: #555555;
+}

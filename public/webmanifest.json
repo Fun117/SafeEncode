@@ -1,0 +1,26 @@
+{
+    "name":"SafeEncode",
+    "short_name":"SafeEncode",
+    "description":"SafeEncode is an application that provides secure encoding of data. This application encrypts strings or data, allowing for safe storage and transmission. Encrypted data is protected from unauthorized access and eavesdropping, ensuring confidentiality and privacy. SafeEncode serves as a reliable tool for users to handle data securely and safeguard sensitive information.",
+    "start_url":"/",
+    "display_override": [
+        "window-control-overlay", 
+        "minimal-ui"
+    ],
+    "display":"standalone",
+    "theme_color": "#18181b",
+    "background_color":"#18181b",
+    "icons": [
+        {
+            "src": "/assets/brand/SafeEncode/safe-encode192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/brand/SafeEncode/safe-encode512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "related_application":""
+}
