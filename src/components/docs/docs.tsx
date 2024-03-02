@@ -21,7 +21,7 @@ type DocsContentGroupProps = {
 export const DocsContentGroup: React.FC<DocsContentGroupProps> = ({ children }) => {
 	return (
 		<>
-            <div className='max-w-[1200px] w-full h-full pt-10 mx-auto'>
+            <div className='max-w-[1200px] w-full h-full pt-10 mx-auto overflow-scroll'>
                 <div className='flex flex-col w-full h-full p-3 md:p-5 md:pr-[20%] *:mb-[30px]'>
                     {children}
                 </div>

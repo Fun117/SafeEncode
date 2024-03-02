@@ -27,7 +27,7 @@ export function DocsSidebar({ sidebar }: {
 
     return (
         <>
-            <aside className='hidden md:block sticky border-zinc-300 border-r-[1px] max-w-[280px] w-full min-h-[100vh] ml-2'>
+            <aside className='hidden md:block sticky border-zinc-300 border-r-[1px] max-w-[280px] min-w-[250px] w-full min-h-[100vh] ml-2'>
                 <div className=''>
                     <nav className=' w-full pt-2'>
                         <ul className='flex flex-col gap-1 w-full *:w-full *:rounded-l-lg'>
