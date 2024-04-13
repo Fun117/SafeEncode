@@ -48,15 +48,26 @@ export async function GET(request: Request) {
     }
 
     // ここで復号化の処理を実装する
-    const decryptedContent = decrypt(content, key);
-    
-    // 復号化された内容を JSON 形式で返す
+    const decryptedContent = await decrypt(content, key);
+
+    if(decryptedContent){
+        // 復号化された内容を JSON 形式で返す
+        return NextResponse.json(
+            {
+                content: decryptedContent,
+            },
+            {
+                status: 200
+            }
+        );
+    }
     return NextResponse.json(
         {
-            content: decryptedContent,
+            error: "Key is incorrect",
+            content: "Error"
         },
         {
-            status: 200
+            status: 400
         }
     );
 }

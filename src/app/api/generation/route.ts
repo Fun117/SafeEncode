@@ -47,21 +47,8 @@ export async function GET(request: Request) {
         );
     }
 
-    // 暗号化する文字列が10文字以下の場合、エラーレスポンスを返す
-    if (content.length < 11) {
-        return NextResponse.json(
-            {
-                error: "Content must be longer than 10 characters",
-                content: "Error"
-            },
-            {
-                status: 400
-            }
-        );
-    }
-
     // ここで暗号化の処理を実装する
-    const encryptedContent = encrypt(content, key);
+    const encryptedContent = await encrypt(content, key);
     
     // 暗号化された内容を JSON 形式で返す
     return NextResponse.json(
