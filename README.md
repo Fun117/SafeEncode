@@ -1,4 +1,7 @@
-# SafeEncode
+<h1 align="center">
+	<img src="./public/assets/brand/SafeEncode/safe-encode192x192.png"/>
+	<p>SafeEncode</p>
+</h1>
 
 SafeEncode is a tool designed for encoding and decoding data with a focus on security and privacy. It aims to securely convert sensitive data, such as confidential information and personal data, into a safe format for storage and transmission. This tool can be used for various secure data processing tasks, including secure communication and storage in databases.
 
