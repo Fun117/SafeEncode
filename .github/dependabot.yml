@@ -5,7 +5,15 @@
 
 version: 2
 updates:
-  - package-ecosystem: "tar" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
+    groups:
+      angular:
+        applies-to: version-updates
+        patterns:
+        - "tar"
+        update-types:
+        - "minor"
+        - "patch"
