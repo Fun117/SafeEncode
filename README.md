@@ -5,15 +5,15 @@
 
 SafeEncode is a tool designed for encoding and decoding data with a focus on security and privacy. It aims to securely convert sensitive data, such as confidential information and personal data, into a safe format for storage and transmission. This tool can be used for various secure data processing tasks, including secure communication and storage in databases.
 
+# Language
+- English
+- [日本語](https://github.com/Fun117/SafeEncode/blob/main/README/ja.md)
+
 # Links
 
 - [Documentation](https://safe-encode.vercel.app/docs)
 - [API Reference](https://safe-encode.vercel.app/docs/api-reference)
 - [Privacy Policy](https://safe-encode.vercel.app/docs/privacy-policy)
-
-# Language
-- English
-- [日本語](https://github.com/Fun117/SafeEncode/blob/main/README/ja.md)
 
 ---
 

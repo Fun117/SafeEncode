@@ -5,15 +5,15 @@
 
 SafeEncode（セーフエンコード）は、セキュリティとプライバシーに焦点を当ててデータをエンコードおよびデコードするためのツールです。機密情報や個人データなどの重要なデータを安全な形式に変換し、保存や送信を行います。このツールは、セキュアな通信やデータベースでの安全なストレージなど、さまざまなセキュアなデータ処理タスクに使用できます。
 
+# Language
+- [English](https://github.com/Fun117/SafeEncode#readme)
+- 日本語
+
 # リンク
 
 - [ドキュメント](https://safe-encode.vercel.app/docs)
 - [API リファレンス](https://safe-encode.vercel.app/docs/api-reference)
 - [プライバシーポリシー](https://safe-encode.vercel.app/docs/privacy-policy)
-
-# Language
-- [English](https://github.com/Fun117/SafeEncode#readme)
-- 日本語
 
 ---
 
